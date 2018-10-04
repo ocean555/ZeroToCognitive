@@ -1,0 +1,12 @@
+applications:
+- path: .
+  memory: 256M
+  instances: 1
+  domain: mybluemix.net
+  name: Z2C-ocean555
+  host: Z2C-ocean555
+  disk_quota: 1024M
+  services:
+    - Speech to Text-0j
+    - Text to Speech-0l
+    - Natural Language Classifier-i3
