@@ -1,0 +1,103 @@
+curl -i --user "f7c6c9bd-a4f5-4c70-96cc-74a17d6bee7d":"QCeeJNEHuAai" -F training_data=@Industry.csv -F training_metadata="{\"language\":\"en\",\"name\":\"Industry2016\"}" "https://gateway.watsonplatform.net/natural-language-classifier/api/v1/classifiers"
+
+C:\Users\IBM_ADMIN\ocean555\ZeroToCognitive\releaseV1\Documentation (master)
+λ curl -i --user "f7c6c9bd-a4f5-4c70-96cc-74a17d6bee7d":"QCeeJNEHuAai" -F training_data=@Indus
+try.csv -F training_metadata="{\"language\":\"en\",\"name\":\"Industry2016\"}" "https://gateway
+.watsonplatform.net/natural-language-classifier/api/v1/classifiers"
+HTTP/2 200
+x-backside-transport: OK OK
+content-type: application/json
+x-xss-protection: 1
+content-security-policy: default-src 'none'
+x-content-type-options: nosniff
+cache-control: no-cache, no-store
+pragma: no-cache
+expires: 0
+x-global-transaction-id: 7ecac92c5bb711ad9659bdd9
+x-dp-watson-tran-id: gateway01-2522463705
+x-dp-transit-id: gateway01-2522463705
+strict-transport-security: max-age=31536000;
+content-length: 395
+date: Fri, 05 Oct 2018 07:24:30 GMT
+
+{
+  "classifier_id" : "f3342ax453-nlc-1846",
+  "name" : "Industry2016",
+  "language" : "en",
+  "created" : "2018-10-05T07:24:30.145Z",
+  "url" : "https://gateway.watsonplatform.net/natural-language-classifier/api/v1/classifiers/f3
+342ax453-nlc-1846",
+  "status_description" : "The classifier instance is in its training phase, not yet ready to ac
+cept classify requests",
+  "status" : "Training"
+}
+
+
+  curl --user "f7c6c9bd-a4f5-4c70-96cc-74a17d6bee7d":"QCeeJNEHuAai" "https://gateway.watsonplatform.net/natural-language-classifier/api/v1/classifiers/f3342ax453-nlc-1846"
+  
+  C:\Users\IBM_ADMIN\ocean555\ZeroToCognitive\releaseV1\Documentation (master)
+λ curl --user "f7c6c9bd-a4f5-4c70-96cc-74a17d6bee7d":"QCeeJNEHuAai" "https://gateway.watsonplatform.net/natural-language-classifier/api/v1/classifiers/f3342ax453-nlc-1846"
+{
+  "classifier_id" : "f3342ax453-nlc-1846",
+  "name" : "Industry2016",
+  "language" : "en",
+  "created" : "2018-10-05T07:24:30.145Z",
+  "url" : "https://gateway.watsonplatform.net/natural-language-classifier/api/v1/classifiers/f3342ax453-nlc-1846",
+  "status_description" : "The classifier instance is in its training phase, not yet ready to accept classify requests",
+  "status" : "Training"
+}
+C:\Users\IBM_ADMIN\ocean555\ZeroToCognitive\releaseV1\Documentation (master)
+λ curl --user "f7c6c9bd-a4f5-4c70-96cc-74a17d6bee7d":"QCeeJNEHuAai" "https://gateway.watsonplatform.net/natural-language-classifier/api/v1/classifiers/f3342ax453-nlc-1846"
+{
+  "classifier_id" : "f3342ax453-nlc-1846",
+  "name" : "Industry2016",
+  "language" : "en",
+  "created" : "2018-10-05T07:24:30.145Z",
+  "url" : "https://gateway.watsonplatform.net/natural-language-classifier/api/v1/classifiers/f3342ax453-nlc-1846",
+  "status_description" : "The classifier instance is now available and is ready to take classifier requests.",
+  "status" : "Available"
+  
+  
+  curl -G --user "f7c6c9bd-a4f5-4c70-96cc-74a17d6bee7d":"QCeeJNEHuAai" "https://gateway.watsonplatform.net/natural-language-classifier/api/v1/classifiers/f3342ax453-nlc-1846/classify" --data-urlencode "text=My client wants better insight into the results from their marketing campaigns"
+  
+  C:\Users\IBM_ADMIN\ocean555\ZeroToCognitive\releaseV1\Documentation (master)
+λ curl -G --user "f7c6c9bd-a4f5-4c70-96cc-74a17d6bee7d":"QCeeJNEHuAai" "https://gateway.watsonplatform.net/natural-language-classifier/api/v1/classifiers/f3342ax453-nlc-1846/classify" --data-urlencode "text=My
+client wants better insight into the results from their marketing campaigns"
+{
+  "classifier_id" : "f3342ax453-nlc-1846",
+  "url" : "https://gateway.watsonplatform.net/natural-language-classifier/api/v1/classifiers/f3342ax453-nlc-1846",
+  "text" : "My client wants better insight into the results from their marketing campaigns",
+  "top_class" : "CPG",
+  "classes" : [ {
+    "class_name" : "CPG",
+    "confidence" : 0.4944032661738776
+  }, {
+    "class_name" : "Life Sciences",
+    "confidence" : 0.3153448141995897
+  }, {
+    "class_name" : "Telco",
+    "confidence" : 0.045664313056431025
+  }, {
+    "class_name" : "MediaEntert",
+    "confidence" : 0.025549622190605435
+  }, {
+    "class_name" : "Electronics",
+    "confidence" : 0.015754870713440245
+  }, {
+    "class_name" : "ChemPetrol",
+    "confidence" : 0.013682165582689228
+  }, {
+    "class_name" : "TravelTransp",
+    "confidence" : 0.0122707201748645
+  }, {
+    "class_name" : "Banking",
+    "confidence" : 0.011046873625367668
+  }, {
+    "class_name" : "Government",
+    "confidence" : 0.008144526745125395
+  }, {
+    "class_name" : "Healthcare",
+    "confidence" : 0.007948911931832326
+  } ]
+}
+}
